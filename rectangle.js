@@ -1,4 +1,4 @@
-var argv = required('yargs').usage('Usage: node $0 --l=[num] --b=[num]').demand(['l', 'b']).argv;
+var argv = require('yargs').usage('Usage: node $0 --l=[num] --b=[num]').demand(['l', 'b']).argv;
 
 var rect = {
     perimeter: function (x, y) {
@@ -23,3 +23,5 @@ function solveRect(l, b) {
 }
 
 solveRect(argv.l, argv.b)
+
+//node rectangle.js --l=5 --b=3
